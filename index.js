@@ -48,7 +48,7 @@ async function askName() {
 }
 
 async function exit() {
-    console.log(`\nThanks for looking around \n\nIf you have any idea or find bug you can report on https://github.com/ronnapatp`)
+    console.log(`\nThanks for looking around \n\nIf you have any idea or find bug you can report on https://github.com/ronnapatp/aboutme-cli`)
     process.exit(1);
 }
 
