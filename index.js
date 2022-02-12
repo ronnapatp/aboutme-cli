@@ -93,6 +93,14 @@ async function skill() {
     await choose();
 }
 
+async function contact() {
+    console.log(`\nYou can contact my by ${chalk.blue('https://ronnapt.com/contact')} or ${ chalk.blue('me@ronnapat.com')}\nThanks for the question\n`)
+
+    await sleep2();
+
+    await choose();
+}
+
 async function choose() {
     const question = await inquirer.prompt({
         name: 'ask',
@@ -103,6 +111,7 @@ async function choose() {
           'Day of birth',
           'School',
           'Skill',
+          'Contact',
           'Exit'
         ],
     });
@@ -117,6 +126,8 @@ async function choose() {
         await skill();
     } else if (question.ask === 'Exit'){
         await exit();
+    } else if (question.ask === 'Contact'){
+        await contact();
     }
 }
 
