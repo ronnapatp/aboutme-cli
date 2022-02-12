@@ -62,35 +62,33 @@ async function exit() {
 
 
 async function name() {
-    const spinner = createSpinner('Finding answer').start();
-    await sleep2
-
-    spinner.success({ text: `\nMy name is Ronnapat Srivoravilai\nThanks for the question\n`})
+    console.log(`\nMy name is Ronnapat Srivoravilai\nThanks for the question\n`)
+    
+    await sleep2();
 
     await choose();
 }
 
 async function bd() {
-    const spinner = createSpinner('Finding answer').start();
-    await sleep2
+    console.log(`\nMy day of birth is  ${chalk.blue('24 May 2009')}\nThanks for the question\n`)
 
-    spinner.success({ text: `\nMy day of birth is 24 May 2009\nThanks for the question\n`})
+    await sleep2();
 
     await choose();
 }
 
 async function school() {
-    const spinner = createSpinner('Finding answer').start();
-    await sleep2
+    console.log(`\nMy school is ${chalk.red('satit chula')}\nThanks for the question\n`)
 
-    spinner.success({ text: `\nMy school is satit chula\nThanks for the question\n`})
+    await sleep2();
 
     await choose();
 }
 
 async function skill() {
-
     console.log(`\nMy skill is ${chalk.yellow('Javascript')} ${chalk.blue('Typescript')} ${chalk.yellow('Python')} ${chalk.red(' HTML')} ${chalk.blue('CSS')}\nThanks for the question\n`)
+
+    await sleep2();
 
     await choose();
 }
