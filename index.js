@@ -66,6 +66,8 @@ async function name() {
     
     await sleep2();
 
+    console.clear();
+
     await choose();
 }
 
@@ -73,6 +75,8 @@ async function bd() {
     console.log(`\nMy day of birth is  ${chalk.blue('24 May 2009')}\nThanks for the question\n`)
 
     await sleep2();
+
+    console.clear();
 
     await choose();
 }
@@ -82,6 +86,8 @@ async function school() {
 
     await sleep2();
 
+    console.clear();
+
     await choose();
 }
 
@@ -90,6 +96,8 @@ async function skill() {
 
     await sleep2();
 
+    console.clear();
+
     await choose();
 }
 
@@ -97,6 +105,8 @@ async function contact() {
     console.log(`\nYou can contact my by ${chalk.blue('https://ronnapt.com/contact')} or ${ chalk.blue('me@ronnapat.com')}\nThanks for the question\n`)
 
     await sleep2();
+    
+    console.clear();
 
     await choose();
 }
