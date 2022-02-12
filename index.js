@@ -23,11 +23,12 @@ async function welcome() {
   rainbowTitle.stop();
   
   console.log(`
-    ${chalk.bgBlue('How to use this command line?')} 
-    Select what you want to know about me
-    and it will popup the information that you want to know
-    If you want to ${chalk.bgRed('Exit')} choose exit one
- `);
+  ${chalk.bgBlue('How to use this command line?')} 
+  Select what you want to know about me
+  and it will popup the information that you want to know
+  If you want to ${chalk.bgRed('Exit')} choose exit one
+  `);
+  console.log(gradient('cyan', 'blue')('\nVisit my website at https://ronnapat.com'));
 }
 
 
@@ -48,7 +49,14 @@ async function askName() {
 }
 
 async function exit() {
-    console.log(`\nThanks for looking around \n\nIf you have any idea or find bug you can report on https://github.com/ronnapatp/aboutme-cli`)
+    console.log(figlet.textSync('Thanks for looking around', {
+        font: 'Ghost',
+        horizontalLayout: 'default',
+        verticalLayout: 'default',
+        width: 80,
+        whitespaceBreak: true
+    }));
+    console.log(`\nIf you have any idea or find bug you can report on https://github.com/ronnapatp/aboutme-cli`)
     process.exit(1);
 }
 
@@ -81,10 +89,8 @@ async function school() {
 }
 
 async function skill() {
-    const spinner = createSpinner('Finding answer').start();
-    await sleep2
 
-    spinner.success({ text: `\nMy skill is Javascript Typescript Python HTML CSS\nThanks for the question\n`})
+    console.log(`\nMy skill is ${chalk.yellow('Javascript')} ${chalk.blue('Typescript')} ${chalk.yellow('Python')} ${chalk.red(' HTML')} ${chalk.blue('CSS')}\nThanks for the question\n`)
 
     await choose();
 }
