@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+//  ____                                     _      ____ _     ___ 
+// |  _ \ ___  _ __  _ __   __ _ _ __   __ _| |_   / ___| |   |_ _|
+// | |_) / _ \| '_ \| '_ \ / _` | '_ \ / _` | __| | |   | |    | | 
+// |  _ < (_) | | | | | | | (_| | |_) | (_| | |_  | |___| |___ | | 
+// |_| \_\___/|_| |_|_| |_|\__,_| .__/ \__,_|\__|  \____|_____|___|
+//                              |_|                                
+
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 import gradient from 'gradient-string';
@@ -50,10 +57,9 @@ async function askName() {
 
 async function exit() {
     console.log(figlet.textSync('Thanks for looking around', {
-        font: 'Ghost',
+        font: 'Standard',
         horizontalLayout: 'default',
         verticalLayout: 'default',
-        width: 80,
         whitespaceBreak: true
     }));
     console.log(`\nIf you have any idea or find bug you can report on https://github.com/ronnapatp/aboutme-cli`)
@@ -105,7 +111,7 @@ async function contact() {
     console.log(`\nYou can contact my by ${chalk.blue('https://ronnapt.com/contact')} or ${ chalk.blue('me@ronnapat.com')}\nThanks for the question\n`)
 
     await sleep2();
-    
+
     console.clear();
 
     await choose();
