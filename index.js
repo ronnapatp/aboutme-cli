@@ -117,6 +117,16 @@ async function contact() {
     await choose();
 }
 
+async function website() {
+    console.log(`\nMy website is ${chalk.blue('https://ronnapt.com/')}\nThanks for the question\n`)
+
+    await sleep2();
+
+    console.clear();
+
+    await choose();
+}
+
 async function choose() {
     const question = await inquirer.prompt({
         name: 'ask',
@@ -128,6 +138,7 @@ async function choose() {
           'School',
           'Skill',
           'Contact',
+          'Website',
           'Exit'
         ],
     });
@@ -144,6 +155,8 @@ async function choose() {
         await exit();
     } else if (question.ask === 'Contact'){
         await contact();
+    } else if (question.ask === 'Website'){
+        await website();
     }
 }
 
